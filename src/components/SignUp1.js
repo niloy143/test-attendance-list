@@ -1,17 +1,20 @@
 import React, { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { RegContext } from '../App';
 import { HiArrowRight } from 'react-icons/hi';
 import Button from './Button';
+import { RegContext } from './RegLayout';
 
 const SignUp = () => {
-    const { user } = useContext(RegContext);
+    const { setInfo } = useContext(RegContext);
     const navigate = useNavigate();
+
     const firstNLastName = e => {
         e.preventDefault();
-        console.log(user);
-        navigate('/user/signup/step-2')
+        setInfo({ name: 'first_name', value: e.target.firstName.value });
+        setInfo({ name: 'last_Name', value: e.target.lastName.value });
+        navigate('/user/signup/step-2');
     }
+
     return (
         <div className='sm:w-11/12 mx-auto'>
             <h2 className='text-3xl font-semibold text-center pt-16 pb-24'>Sign Up Form</h2>

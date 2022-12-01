@@ -3,13 +3,27 @@ import { NavLink } from 'react-router-dom';
 import Button from './Button';
 
 const Login = () => {
+    const handleLogin = e => {
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+
+        if (password.length >= 8) {
+            fetch(`https://test.nexisltd.com/login`, {
+                method: 'POST',
+                body: JSON.stringify({ email, password })
+            })
+                .then(res => res.json())
+                .then(data => console.log(data))
+        }
+    }
     return (
         <div className='sm:w-11/12 mx-auto'>
             <h2 className='text-3xl font-semibold text-center pt-16 pb-24'>Log In Form</h2>
-            <form className='flex flex-col items-center gap-12'>
-                <input className='w-full border-b outline-none p-2' placeholder='Write Email Address' name="" type="email" required />
+            <form className='flex flex-col items-center gap-12' onSubmit={handleLogin}>
+                <input className='w-full border-b outline-none p-2' placeholder='Write Email Address' name="email" type="email" required />
                 <div className='w-full'>
-                    <input className='w-full border-b outline-none p-2' placeholder='Password' name="" type="password" required />
+                    <input className='w-full border-b outline-none p-2' placeholder='Password' name="password" type="password" required />
                     <p className='text-[#7E7E7E] text-sm mt-1'>Your password must be 8 characters.</p>
                 </div>
                 <Button>Log In</Button>
