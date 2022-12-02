@@ -10,14 +10,20 @@ const RegLayout = () => {
     const infoManager = (userInfo, { name, value }) => {
         return { ...userInfo, [name]: value };
     }
+    const [userInfo, setInfo] = useReducer(infoManager, {});
 
-    const [userInfo, setInfo] = useReducer(infoManager, {
-        first_name: "",
-        last_Name: "",
-        phone_number: "",
-        email: "",
-        password: "",
-    });
+    const signUp = () => fetch(`https://test.nexisltd.com/signup`, {
+        method: "POST",
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(userInfo)
+    })
+
+    const logIn = (email, password) => fetch(`https://test.nexisltd.com/login`, {
+        method: 'POST',
+        body: JSON.stringify({ email, password })
+    })
 
     return (
         <div className='flex flex-col lg:flex-row justify-between items-center max-w-7xl mx-auto font-[inter] px-3 py-5'>
@@ -26,7 +32,7 @@ const RegLayout = () => {
                 <img className='max-w-full' src={cover} alt="" />
             </div>
             <div className='w-full shadow-lg border rounded-xl p-5 sm:w-[520px] h-[600px]'>
-                <RegContext.Provider value={{ userInfo, setInfo }}>
+                <RegContext.Provider value={{ userInfo, setInfo, signUp, logIn }}>
                     <Outlet />
                 </RegContext.Provider>
             </div>
