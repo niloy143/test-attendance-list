@@ -1,4 +1,5 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
+import AttendanceList from "../components/AttendanceList";
 import Login from "../components/Login";
 import RegLayout from "../components/RegLayout";
 import SignUp1 from "../components/SignUp1";
@@ -39,6 +40,10 @@ const routes = createBrowserRouter([
                 element: <SignUp3 />
             }
         ]
+    },
+    {
+        path: '/attendance-list',
+        element: <AttendanceList />
     }
 ])
 
