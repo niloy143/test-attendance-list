@@ -3,8 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { SpinnerCircularSplit } from 'spinners-react';
 import logo from '../assets/logo.png';
+import useTitle from '../hooks/useTitle';
 
 const AttendanceList = () => {
+    useTitle('Attendance List');
     const navigate = useNavigate();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);

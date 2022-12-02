@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import useTitle from '../hooks/useTitle';
 import Button from './Button';
 
 const Login = () => {
+    useTitle('Log In')
     const navigate = useNavigate();
     const [logging, setLogging] = useState(false);
     const [error, setError] = useState('');

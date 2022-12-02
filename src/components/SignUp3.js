@@ -1,9 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { Navigate, NavLink, useNavigate } from 'react-router-dom';
+import useTitle from '../hooks/useTitle';
 import Button from './Button';
 import { RegContext } from './RegLayout';
 
 const SignUp3 = () => {
+    useTitle('Sign Up');
     const navigate = useNavigate();
     const { userInfo, setInfo, signUp, logIn } = useContext(RegContext);
     const [signing, setSigning] = useState(false);

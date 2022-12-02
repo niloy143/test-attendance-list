@@ -44,6 +44,10 @@ const routes = createBrowserRouter([
     {
         path: '/attendance-list',
         element: <AttendanceList />
+    },
+    {
+        path: '*',
+        element: <Navigate to="/" />
     }
 ])
 

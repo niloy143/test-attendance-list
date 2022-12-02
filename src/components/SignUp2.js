@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import { HiArrowRight } from 'react-icons/hi';
 import { Navigate, NavLink, useNavigate } from 'react-router-dom';
+import useTitle from '../hooks/useTitle';
 import Button from './Button';
 import { RegContext } from './RegLayout';
 
 const SignUp2 = () => {
+    useTitle('Sign Up (Step-2)');
     const { userInfo, setInfo } = useContext(RegContext);
     const navigate = useNavigate();
 
