@@ -37,7 +37,7 @@ const SignUp3 = () => {
                 <h2 className='text-3xl font-semibold text-center pt-16 pb-24'>Sign Up Form</h2>
                 <form className='flex flex-col items-center gap-12' onSubmit={handleSignUp}>
                     <div className='w-full'>
-                        <input className='w-full border-b outline-none p-2' defaultValue={userInfo.password} placeholder='Password' type="password" name="password" onChange={e => setInfo({ name: 'password', value: e.target.value })} required />
+                        <input className='w-full  border-0 focus:ring-0 border-b-2 border-b-[#A4A4A4] focus:border-b-[#000000] p-2' defaultValue={userInfo.password} placeholder='Password' type="password" name="password" onChange={e => setInfo({ name: 'password', value: e.target.value })} required />
                         <p className='text-[#7E7E7E] text-sm mt-1'>Your password must be 8 characters.</p>
                     </div>
                     <div className='w-full'>

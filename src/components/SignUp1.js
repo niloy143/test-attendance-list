@@ -19,8 +19,8 @@ const SignUp = () => {
         <div className='sm:w-11/12 mx-auto'>
             <h2 className='text-3xl font-semibold text-center pt-16 pb-24'>Sign Up Form</h2>
             <form className='flex flex-col items-center gap-12' onSubmit={firstNLastName}>
-                <input className='w-full border-b outline-none p-2' defaultValue={first_name} placeholder='Write First Name' name="firstName" type="text" required />
-                <input className='w-full border-b outline-none p-2' defaultValue={last_Name} placeholder='Write Last Name' name="lastName" type="text" required />
+                <input className='w-full  border-0 focus:ring-0 border-b-2 border-b-[#A4A4A4] focus:border-b-[#000000] p-2' defaultValue={first_name} placeholder='Write First Name' name="firstName" type="text" required />
+                <input className='w-full  border-0 focus:ring-0 border-b-2 border-b-[#A4A4A4] focus:border-b-[#000000] p-2' defaultValue={last_Name} placeholder='Write Last Name' name="lastName" type="text" required />
                 <Button>
                     <span className='inline-flex items-center gap-2'>
                         <span>Next Step</span>

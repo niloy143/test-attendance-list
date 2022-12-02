@@ -21,10 +21,10 @@ const SignUp2 = () => {
                 <h2 className='text-3xl font-semibold text-center pt-16 pb-24'>Sign Up Form</h2>
                 <form className='flex flex-col items-center gap-12' onSubmit={numNEmail}>
                     <div className='w-full flex items-center gap-3'>
-                        <input className='w-16 border-b outline-none p-2' defaultValue={userInfo.phone_number?.split(' ')[0]} placeholder='+880' name="countryCode" type="number" required />
-                        <input className='grow w-full border-b outline-none p-2' defaultValue={userInfo.phone_number?.split(' ')[1]} placeholder='1XXXXXXXXX' name="number" type="number" required />
+                        <input className='w-16  border-0 focus:ring-0 border-b-2 border-b-[#A4A4A4] focus:border-b-[#000000] p-2' defaultValue={userInfo.phone_number?.split(' ')[0]} placeholder='+880' name="countryCode" type="number" required />
+                        <input className='grow w-full  border-0 focus:ring-0 border-b-2 border-b-[#A4A4A4] focus:border-b-[#000000] p-2' defaultValue={userInfo.phone_number?.split(' ')[1]} placeholder='1XXXXXXXXX' name="number" type="number" required />
                     </div>
-                    <input className='w-full border-b outline-none p-2' defaultValue={userInfo.email} placeholder='Write Email Address' name="email" type="email" required />
+                    <input className='w-full  border-0 focus:ring-0 border-b-2 border-b-[#A4A4A4] focus:border-b-[#000000] p-2' defaultValue={userInfo.email} placeholder='Write Email Address' name="email" type="email" required />
                     <div className='w-full flex justify-between items-center sm:px-3'>
                         <NavLink className='text-[#7E7E7E] text-sm font-semibold' to='/user/signup/step-1'>Back</NavLink>
                         <Button>

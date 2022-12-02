@@ -40,7 +40,7 @@ const AttendanceList = () => {
     return (
         <div className='max-w-7xl mx-auto sm:my-16 my-5'>
             <img className='pl-5 w-[160px] sm:w-auto' src={logo} alt="" />
-            <h2 className='bg-[#1678CB] max-w-lg mx-3 sm:mx-auto mt-5 mb-10 rounded-md text-white text-center font-semibold p-3 text-2xl sm:text-4xl'>Attendance Information</h2>
+            <h2 className='bg-[#1678CB] w-11/12 sm:max-w-lg mx-auto mt-5 mb-10 rounded-md text-white text-center font-semibold p-3 text-2xl sm:text-4xl'>Attendance Information</h2>
             <div className='max-w-4xl px-3 mx-auto'>
                 {
                     loading ? <div className='flex justify-center my-12'>
@@ -64,8 +64,8 @@ const AttendanceList = () => {
                                                 {
                                                     Object.keys(attendance).map((date, i) => <Table.Row className="bg-white" key={i}>
                                                         <Table.Cell> {date} </Table.Cell>
-                                                        <Table.Cell>
-                                                            <span className='inline-grid grid-cols-4 gap-x-5 gap-y-3'>
+                                                        <Table.Cell className="whitespace-nowrap">
+                                                            <span className='inline-grid sm:grid-cols-4 gap-x-5 gap-y-3'>
                                                                 {
                                                                     attendance[date].times.map((time, i) => <span key={i}>{time}</span>)
                                                                 }

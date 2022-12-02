@@ -37,9 +37,9 @@ const Login = () => {
         <div className='sm:w-11/12 mx-auto'>
             <h2 className='text-3xl font-semibold text-center pt-16 pb-24'>Log In Form</h2>
             <form className='flex flex-col items-center gap-12' onSubmit={handleLogin}>
-                <input className='w-full border-b outline-none p-2' placeholder='Write Email Address' name="email" type="email" required />
+                <input className='w-full  border-0 focus:ring-0 border-b-2 border-b-[#A4A4A4] focus:border-b-[#000000] p-2' placeholder='Write Email Address' name="email" type="email" required />
                 <div className='w-full'>
-                    <input className='w-full border-b outline-none p-2' placeholder='Password' name="password" type="password" required />
+                    <input className='w-full  border-0 focus:ring-0 border-b-2 border-b-[#A4A4A4] focus:border-b-[#000000] p-2' placeholder='Password' name="password" type="password" required />
                     <p className='text-[#7E7E7E] text-sm mt-1'>Your password must be 8 characters.</p>
                 </div>
                 <div className='flex flex-col items-center'>
